@@ -27,7 +27,6 @@ public class SwitchChallenge2 {
         if(day == 4) dayOfWeek = "Thursday";
         if(day== 5) dayOfWeek = "Friday";
         if(day == 6) dayOfWeek = "Saturday";
-
         System.out.println(day + " stands for " + dayOfWeek);
     }
 }
