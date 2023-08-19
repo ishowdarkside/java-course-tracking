@@ -9,7 +9,7 @@ public class ReadUserInputChallenge {
       //sum koji ce da bude suma svih vrijednosti
       double sum = 0;
 
-      //dok je counter manji il ili jednak 5, promptuj usera za input, try parseovat input i increasuj counter zajedno sa sumo
+      //dok je counter manji il ili jednak 5, promptuj usera za input, try parseovat input i increasuj counter zajedno sa sum
       while(counter <= 5){
           System.out.println("Enter number #" + counter + ":");
           String nextNumber = scanner.nextLine();
