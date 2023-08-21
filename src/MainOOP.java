@@ -1,15 +1,10 @@
 public class MainOOP {
 
     public static void main(String[] args) {
-        BankAccount acc = new BankAccount();
-        acc.setEmail("ajdin.omerovicc.ets@gmail.com");
-        acc.setPhoneNum(061055341);
-        acc.setAccNum(15151);
-        acc.setCustomerName("Ajdin");
-
-        acc.deposit(50);
-        acc.withdraw(15155);
-        acc.getAccBalance();
-        acc.getCustomerName();
+       // BankAccount acc = new BankAccount(12345,531135,"Ajdin","ajdin.omerovicc.ets@gmail.com",135);
+        // BankAccount bobsAccount = new BankAccount("Almir","almir@email.com",135931590);
+        //System.out.print(bobsAccount);
+        Customer ajdin = new Customer("AjdinBezze@gmail.com","Ajdinkooo");
+        System.out.println(ajdin.getEmail());
     }
 }

@@ -1,18 +1,18 @@
 public class Main {
-    public static void main(String[] args){
-        boolean gameOver = true;
-        int score = 5000;
-        int levelCompleted = 5;
-        int bonus = 100;
+    public static void main(String[] args) {
 
-        if (score < 5000 && score > 1000) {
-            System.out.println("your score is less than 5000 and greater than 1000");
-        }
-        else if(score < 1000) {
-            System.out.println("Your score was less then 1000");
-        }
-        else{
-            System.out.println("Its not less than 5000");
+        for(int i = 0;i <=5;i++){
+            LPAStudent s = new LPAStudent("S92300" + i,switch (i){
+                case 1 -> "Mary";
+                case 2 -> "Carol";
+                case 3 -> "Tim";
+                case 4 -> "Harry";
+                case 5 -> "Lista";
+                default -> "Anony";
+            },"05/11/1985","JAVA masterclass");
+
+            System.out.println(s.name());
+
         }
 
     }
