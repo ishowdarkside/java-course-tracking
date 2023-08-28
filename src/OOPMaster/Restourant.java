@@ -5,12 +5,11 @@ public class Restourant {
     private Order order;
 
     public Restourant(){
-        this.order = Restourant.orderMeal("coca-cola","small",2.99);
-
+        this.order = Restourant.orderMeal("coca-cola","small","cheese burger",4.51);
 
     }
-    private static Order orderMeal(String drinkType,String drinkSize,double drinkPrice){
-        return new Order(new Drink(drinkType,drinkSize  ,drinkPrice),new Burger(),new SideItem());
+    private static Order orderMeal(String drinkType,String drinkSize,String burgerType,double burgerPrice){
+        return new Order(new Drink(drinkType,drinkSize),new Burger(burgerType,burgerPrice),new SideItem());
     }
 
     @Override
@@ -18,6 +17,10 @@ public class Restourant {
         return "Restourant{ " +
                 "order:" + order +
                 '}';
+    }
+
+    public void getTotalPrice(){
+        order.getTotalPrice();
     }
 }
 
@@ -40,5 +43,9 @@ class Order {
                 ", burger:" + burger +
                 ", sideItem:" + sideItem +
                 '}';
+    }
+
+    public void getTotalPrice(){
+        System.out.println("TOTAL: " + (this.drink.getPrice() + this.sideItem.getPrice() + this.burger.getPrice()));
     }
 }

@@ -5,10 +5,15 @@ public class Drink {
     private String drinkSize;
     private double drinkPrice;
 
-    public Drink(String drinkType,String drinkSize,double drinkPrice){
+    public Drink(String drinkType,String drinkSize){
         this.drinkType = drinkType;
         this.drinkSize = drinkSize;
-        this.drinkPrice = drinkPrice;
+        switch(drinkSize){
+            case "small" -> this.drinkPrice = 2.99;
+            case "medium" -> this.drinkPrice = 4.99;
+            case "large" -> this.drinkPrice = 5.99;
+            default -> System.out.println("Unknown drink size");
+        }
 
     }
 
@@ -19,5 +24,9 @@ public class Drink {
                 ", drinkSize:'" + drinkSize + '\'' +
                 ", drinkPrice:" + drinkPrice +
                 '}';
+    }
+
+    public double getPrice(){
+        return this.drinkPrice;
     }
 }
